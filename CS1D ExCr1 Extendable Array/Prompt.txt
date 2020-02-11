@@ -1,0 +1,22 @@
+    Implement the vector ADT by means of an extendable array 
+(expands dynamically) used in a circular fashion, so that 
+insertions and deletions at the beginning and end run in constant 
+time.  Print the circular array before and after each insertion and 
+deletion.  Insertions and deletion that are not at the beginning or 
+end will run in O(n) time.  Test the vector ADT methods (inserts, 
+deletes, size, isEmpty, etc.).  The initial array size is 4. Print out 
+the index (rank) of the array with the corresponding value.
+
+Do not use the <vector> STL.
+
+    Use the following data:
+
+    Insert 14, 5, 4, 1, 21, 33, 12, 8
+    Delete 14
+    Delete 1
+    Insert 9 at the front of the vector
+    Insert 7 after 33
+    Insert 44 at the end of the vector
+
+Due February 12
+
