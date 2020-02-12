@@ -19,4 +19,3 @@ Do not use the <vector> STL.
     Insert 44 at the end of the vector
 
 Due February 12
-

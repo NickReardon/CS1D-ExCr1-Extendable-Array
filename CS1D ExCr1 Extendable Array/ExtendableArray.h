@@ -40,7 +40,7 @@ protected:
 #ifndef Protected_Methods //--------------------------------------------------
 
 	/**
-	 * @fn	void ExtendableArray::shiftRight(const int givenIndex)
+	 * @fn	void ExtendableArray::shiftRight_Outward(const int givenIndex)
 	 * @brief	Shift array members right/up, wrapping around to the end
 	 *
 	 * @exception	Except	Exception thrown when class is empty.
@@ -48,7 +48,7 @@ protected:
 	 * @param 	givenIndex	int value passed from outside of the object index is adjusted for use in
 	 * 						the method.
 	 */
-	void shiftRight(const int givenIndex)
+	void shiftRight_Outward(const int givenIndex)
 	{
 
 		if (empty())
@@ -73,13 +73,13 @@ protected:
 
 
 		int tempIndex = endIndex;
-		for (int i = capacity - 1; i >= givenIndex; i--)
+		for (int i = capacity - 1; i > givenIndex; i--)
 		{
 			if (tempIndex == 0)
 			{
 				typeAr[tempIndex] = typeAr[capacity - 1];
 
-				tempIndex = 0;
+				tempIndex = capacity - 1;
 			}
 			else
 			{
@@ -91,7 +91,7 @@ protected:
 	}
 
 	/**
-	 * @fn	void ExtendableArray::shiftLeft(const int givenIndex)
+	 * @fn	void ExtendableArray::shiftLeft_Outward(const int givenIndex)
 	 * @brief	Shift array members left/down, wrapping around to the end
 	 *
 	 * @exception	Except	Exception thrown when class is empty.
@@ -99,7 +99,7 @@ protected:
 	 * @param 	givenIndex	int value passed from outside of the object index is adjusted for use in
 	 * 						the method.
 	 */
-	void shiftLeft(const int givenIndex)
+	void shiftLeft_Outward(const int givenIndex)
 	{
 
 		if (empty())
@@ -138,6 +138,101 @@ protected:
 			}
 		}
 	}
+
+	/**
+	 * @fn	void ExtendableArray::shiftLeft_Inward(const int givenIndex)
+	 * @brief	Shift array members left/down, wrapping around to the end
+	 *
+	 * @exception	Except	Exception thrown when class is empty.
+	 *
+	 * @param 	givenIndex	int value passed from outside of the object index is adjusted for use in
+	 * 						the method.
+	 */
+	void shiftLeft_Inward(const int givenIndex)
+	{
+
+		int tempIndex = adjustedIndex(givenIndex);
+
+		if (empty())
+		{
+			throw Except("Array is empty", EMPTY, 5);
+		}
+
+		if (frontIndex == capacity - 1)
+		{
+			frontIndex = 0;
+		}
+		else
+		{
+			frontIndex++;
+		}
+
+
+		for (int i = givenIndex; i > 0; i--)
+		{
+
+			if (tempIndex == 0)
+			{
+				tempIndex = capacity - 1;
+
+				typeAr[0] = typeAr[tempIndex];
+			}
+			else
+			{
+				typeAr[tempIndex] = typeAr[tempIndex - 1];
+
+				tempIndex--;
+			}
+		}
+	}
+
+	/**
+	 * @fn	void ExtendableArray::shiftRight_Inward(const int givenIndex)
+	 * @brief	Shift array members right/up, wrapping around to the end
+	 *
+	 * @exception	Except	Exception thrown when class is empty.
+	 *
+	 * @param 	givenIndex	int value passed from outside of the object index is adjusted for use in
+	 * 						the method.
+	 */
+	void shiftRight_Inward(const int givenIndex)
+	{
+
+		int tempIndex = adjustedIndex(givenIndex);
+
+		if (empty())
+		{
+			throw Except("Array is empty", EMPTY, 5);
+		}
+
+		if (endIndex == 0)
+		{
+			endIndex = capacity - 1;
+		}
+		else
+		{
+			endIndex--;
+		}
+
+
+		for (int i = givenIndex; i < capacity - 1; i++)
+		{
+
+			if (tempIndex == capacity - 1)
+			{
+				tempIndex = capacity - 1;
+
+				typeAr[tempIndex] = typeAr[0];
+			}
+			else
+			{
+				typeAr[tempIndex] = typeAr[tempIndex + 1];
+
+				tempIndex++;
+			}
+		}
+	}
+
 
 	/**
 	 * @fn	void ExtendableArray::expand(const int minIncrease = 1)
@@ -240,6 +335,39 @@ protected:
 	{
 		delete[] typeAr;
 	}
+
+
+
+	void shiftRight_Outward(std::ostream& output, int givenIndex) 
+	{ 
+		output << "Called shiftRight_Outward()" << '\n';
+		shiftRight_Outward(givenIndex); 
+	}
+
+	void shiftLeft_Outward(std::ostream& output, const int givenIndex) 
+	{ 
+		output << "Called shiftLeft_Outward()" << '\n';
+		shiftLeft_Outward(givenIndex);
+	}
+
+	void expand(std::ostream& output, const int minIncrease = 1) 
+	{ 
+		output << "Called expand()" << '\n';
+		expand(minIncrease);
+	}
+
+	int adjustedIndex(std::ostream& output, const	int givenIndex) const 
+	{ 
+		output << "Called adjustedIndex()" << '\n';
+		adjustedIndex(givenIndex);
+	}
+
+	void destroy(std::ostream& output)
+	{ 
+		output << "Called destroy()" << '\n';
+		destroy();
+	}
+
 
 #endif // !Protected_Methods //--------------------------------------------------
 
@@ -346,6 +474,26 @@ public:
 		delete[] typeAr;
 	}
 
+
+
+	ExtendableArray<Type>(std::ostream& output, const int newCapacity = 8)
+	{
+		output << "Called constructor" << '\n';
+		ExtendableArray(newCapacity);
+	}
+
+	ExtendableArray<Type>(std::ostream& output, const ExtendableArray<Type>& otherExArray)
+	{
+		output << "Called copy constructor" << '\n';
+		ExtendableArray(otherExArray);
+	}
+
+	ExtendableArray<Type>(std::ostream& output, const Type* ptrArray, const int arSize)
+	{
+		output << "Called array copy contructor" << '\n';
+		ExtendableArray(ptrArray, arSize);
+	}
+
 #endif // !Constructors_/_Deconstructors --------------------------------------------------
 
 #ifndef Public_Methods //--------------------------------------------------
@@ -426,15 +574,14 @@ public:
 		}
 		else
 		{
-			if (adjIndex <= (currentSize - 1 / 2))
+			if (adjIndex <= (currentSize - currentSize / 2))
 			{
-				shiftLeft(givenIndex);
+				shiftLeft_Outward(givenIndex);
 				adjIndex--;
 			}
 			else
 			{
-				shiftRight(givenIndex);
-				adjIndex++;
+				shiftRight_Outward(givenIndex);
 			}
 
 			typeAr[adjIndex] = newItem;
@@ -452,7 +599,6 @@ public:
 	 * @tparam	Type	template datatype.
 	 * @param 	newItem	The new item.
 	 */
-	template<class Type>
 	void insertFront(const Type& newItem)
 	{
 		if (full())
@@ -487,7 +633,6 @@ public:
 	 * @tparam	Type	template datatype.
 	 * @param 	newItem	The new item.
 	 */
-	template<class Type>
 	void insertBack(const Type& newItem)
 	{
 		if (full())
@@ -513,6 +658,39 @@ public:
 
 		currentSize++;
 
+
+	}
+
+	/**
+	 * @fn	void ExtendableArray::eraseAt(const int givenIndex)
+	 * @brief	Erases the value at the given index ( after adjustment )
+	 *
+	 * @exception	Except	Exception thrown when class is empty.
+	 *
+	 * @param 	givenIndex	Zero-based index of the array.
+	 */
+	void eraseAt(const int givenIndex)
+	{
+		int adjIndex = adjustedIndex(givenIndex);
+
+		if (empty())
+		{
+			throw Except("Array is empty", EMPTY, 5);
+		}
+		else
+		{
+			if (adjIndex <= (currentSize - currentSize / 2))
+			{
+				shiftLeft_Inward(givenIndex);
+			}
+			else
+			{
+				shiftRight_Inward(givenIndex);
+			}
+
+			currentSize--;
+
+		}
 
 	}
 
@@ -711,6 +889,80 @@ public:
 		}
 	}
 
+
+	
+	void clearAll(std::ostream& output, const int newCapacity = capacity)
+	{
+		output << "Called clearAll()" << '\n';
+		clearAll(capacity);
+	}
+	
+	bool empty(std::ostream& output) const
+	{
+		output << "Called empty()" << '\n';
+		empty();
+	}
+	
+	bool full(std::ostream& output) const
+	{
+		output << "Called full()" << '\n';
+		full();
+	}
+	
+	int size(std::ostream& output) const
+	{
+		output << "Called size()" << '\n';
+		size();
+	}
+	
+	void insertAt(std::ostream& output, const int givenIndex, const Type& newItem)
+	{
+		output << "Called insertAt()" << '\n';
+		insertAt(givenIndex, newItem);
+	}
+	
+	void insertFront(std::ostream& output, const Type& newItem)
+	{
+		output << "Called insertFront()" << '\n';
+		insertFront(newItem);
+	}
+	
+	void insertBack(std::ostream& output, const Type& newItem)
+	{
+		output << "Called insertBack()" << '\n';
+		insertBack(newItem);
+	}
+	
+	void eraseFront(std::ostream& output)
+	{
+		output << "Called eraseFront()" << '\n';
+		eraseFront();
+	}
+	
+	void eraseBack(std::ostream& output)
+	{
+		output << "Called eraseBack()" << '\n';
+		eraseBack();
+	}
+	
+	Type front(std::ostream& output) const
+	{
+		output << "Called front()" << '\n';
+		front();
+	}
+	
+	Type back(std::ostream& output) const
+	{
+		output << "Called back()" << '\n';
+		back();
+	}
+	
+	Type& at(std::ostream& output, const int index) const
+	{
+		output << "Called at()" << '\n';
+		at(index);
+	}
+	
 #endif // !Public_Methods //--------------------------------------------------
 
 };
