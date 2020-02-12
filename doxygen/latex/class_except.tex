@@ -1,0 +1,146 @@
+\hypertarget{class_except}{}\doxysection{Except Class Reference}
+\label{class_except}\index{Except@{Except}}
+
+
+{\ttfamily \#include $<$Except.\+h$>$}
+
+
+
+Inheritance diagram for Except\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_except__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Except\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_except__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_except_a83a085cab6fa21855ad075bb774d1aad}{Except}} (const std\+::string \&msg, int err\+\_\+num, int err\+\_\+off)
+\item 
+virtual \mbox{\hyperlink{class_except_a02478aeeca39db020e1f97ff95dfec67}{$\sim$\+Except}} ()  throw ()
+\item 
+virtual int \mbox{\hyperlink{class_except_ad24a1526aeb28e96b303e84f41129d76}{get\+Error\+Number}} () const  throw ()
+\item 
+virtual int \mbox{\hyperlink{class_except_adc97d93e4985f931ecf37fff4df69f5b}{get\+Error\+Offset}} () const  throw ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_except_a2f8500c8457e0151dc636587832484c2}{error\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em Error number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_except_aea3535149295845a2af90f9afbe31ec3}{error\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Error offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 26 of file Except.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_except_a83a085cab6fa21855ad075bb774d1aad}\label{class_except_a83a085cab6fa21855ad075bb774d1aad}} 
+\index{Except@{Except}!Except@{Except}}
+\index{Except@{Except}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{Except()}{Except()}}
+{\footnotesize\ttfamily Except\+::\+Except (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{int}]{err\+\_\+num,  }\item[{int}]{err\+\_\+off }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructor (C++ S\+TL string, int, int). 
+\begin{DoxyParams}{Parameters}
+{\em msg} & The error message \\
+\hline
+{\em err\+\_\+num} & Error number \\
+\hline
+{\em err\+\_\+off} & Error offset \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Except.\+h.
+
+\mbox{\Hypertarget{class_except_a02478aeeca39db020e1f97ff95dfec67}\label{class_except_a02478aeeca39db020e1f97ff95dfec67}} 
+\index{Except@{Except}!````~Except@{$\sim$Except}}
+\index{````~Except@{$\sim$Except}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{$\sim$Except()}{~Except()}}
+{\footnotesize\ttfamily virtual Except\+::$\sim$\+Except (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor. Virtual to allow for subclassing. 
+
+Definition at line 52 of file Except.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_except_ad24a1526aeb28e96b303e84f41129d76}\label{class_except_ad24a1526aeb28e96b303e84f41129d76}} 
+\index{Except@{Except}!getErrorNumber@{getErrorNumber}}
+\index{getErrorNumber@{getErrorNumber}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{getErrorNumber()}{getErrorNumber()}}
+{\footnotesize\ttfamily virtual int Except\+::get\+Error\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns error number. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_except_a2f8500c8457e0151dc636587832484c2}{error\+\_\+number}} 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Except.\+h.
+
+\mbox{\Hypertarget{class_except_adc97d93e4985f931ecf37fff4df69f5b}\label{class_except_adc97d93e4985f931ecf37fff4df69f5b}} 
+\index{Except@{Except}!getErrorOffset@{getErrorOffset}}
+\index{getErrorOffset@{getErrorOffset}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{getErrorOffset()}{getErrorOffset()}}
+{\footnotesize\ttfamily virtual int Except\+::get\+Error\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns error offset. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_except_aea3535149295845a2af90f9afbe31ec3}{error\+\_\+offset}} 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Except.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_except_a2f8500c8457e0151dc636587832484c2}\label{class_except_a2f8500c8457e0151dc636587832484c2}} 
+\index{Except@{Except}!error\_number@{error\_number}}
+\index{error\_number@{error\_number}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{error\_number}{error\_number}}
+{\footnotesize\ttfamily int Except\+::error\+\_\+number\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Error number. 
+
+
+
+Definition at line 30 of file Except.\+h.
+
+\mbox{\Hypertarget{class_except_aea3535149295845a2af90f9afbe31ec3}\label{class_except_aea3535149295845a2af90f9afbe31ec3}} 
+\index{Except@{Except}!error\_offset@{error\_offset}}
+\index{error\_offset@{error\_offset}!Except@{Except}}
+\doxysubsubsection{\texorpdfstring{error\_offset}{error\_offset}}
+{\footnotesize\ttfamily int Except\+::error\+\_\+offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Error offset. 
+
+
+
+Definition at line 31 of file Except.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+repos/\+C\+S1\+D Ex\+Cr1 Extendable Array/\+C\+S1\+D Ex\+Cr1 Extendable Array/\mbox{\hyperlink{_except_8h}{Except.\+h}}\end{DoxyCompactItemize}

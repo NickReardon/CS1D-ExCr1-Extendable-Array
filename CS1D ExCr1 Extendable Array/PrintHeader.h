@@ -27,7 +27,7 @@
 *
 * 		PrintHeader (oFile);
 *
-* ---------------------------------------------------------------------------
+* --------------------------------------------------------------------------- 
 *  Output
 * --------
 * 	The function will output as follows. Ex:
@@ -61,7 +61,13 @@ const int PROGRAM_NUM = 1;
 const std::string PROGRAM_NAME = "Extendable Array";
 const std::string PROGRAM_TYPE = "Extra Credit";
 
-
+/**
+ * @fn	void PrintHeader(std::ostream &output, std::string inputText)
+ * @brief	Print header
+ *
+ * @param [in,out]	output   	ostream output
+ * @param 		  	inputText	file name of the prompt text file
+ */
 void PrintHeader(std::ostream &output, std::string inputText)
 {
 	std::string typeNum = PROGRAM_TYPE + " #" + std::to_string(PROGRAM_NUM);
@@ -83,6 +89,6 @@ void PrintHeader(std::ostream &output, std::string inputText)
 		<< std::string(76, '*')
 		<< std::endl << std::endl;
 
-}
+}   
 
 #endif //_PRINTHEADER_H_

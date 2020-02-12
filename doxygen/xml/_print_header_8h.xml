@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_print_header_8h" kind="file" language="C++">
+    <compoundname>PrintHeader.h</compoundname>
+    <includedby refid="main_8h" local="yes">repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h</label>
+        <link refid="_print_header_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_print_header_8h_1a6f47729e4fd4b4bb790e11aa31c9b60e" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string PROGRAMMER</definition>
+        <argsstring></argsstring>
+        <name>PROGRAMMER</name>
+        <initializer>= &quot;Nick Reardon&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="56" column="19" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_print_header_8h_1ae9981d5992758d37d3b4e2219e265095" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string SECTION</definition>
+        <argsstring></argsstring>
+        <name>SECTION</name>
+        <initializer>= &quot;MW - 2:30p&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="57" column="19" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_print_header_8h_1ad28cee007826f68c0e78443c29dda6db" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string CLASS</definition>
+        <argsstring></argsstring>
+        <name>CLASS</name>
+        <initializer>= &quot;CS1D&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="58" column="19" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_print_header_8h_1a3986204e583aea24c9a570469c529453" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PROGRAM_NUM</definition>
+        <argsstring></argsstring>
+        <name>PROGRAM_NUM</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="59" column="11" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string PROGRAM_NAME</definition>
+        <argsstring></argsstring>
+        <name>PROGRAM_NAME</name>
+        <initializer>= &quot;Extendable Array&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="60" column="19" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_print_header_8h_1a7d59f9fb3394f5975195135214fe23ff" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string PROGRAM_TYPE</definition>
+        <argsstring></argsstring>
+        <name>PROGRAM_TYPE</name>
+        <initializer>= &quot;Extra Credit&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="61" column="19" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_print_header_8h_1ae816b12e943159a475172c4bc33fe125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrintHeader</definition>
+        <argsstring>(std::ostream &amp;output, std::string inputText)</argsstring>
+        <name>PrintHeader</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>inputText</declname>
+        </param>
+        <briefdescription>
+<para>Print header. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file name of the prompt text file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" line="70" column="6" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h" bodystart="70" bodyend="91"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="13" endline="38">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*/*****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>AUTHOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Nick<sp/>Reardon</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Extra<sp/>Credit<sp/>#1<sp/><sp/>:<sp/>Extendable<sp/>Array</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>CS1D</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>SECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>MW<sp/>-<sp/>2:30p</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>DUE<sp/>DATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>02<sp/>/<sp/>12<sp/>/<sp/>20</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PRINTHEADER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PRINTHEADER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/>PrintHeader</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>This<sp/>function<sp/>will<sp/>output<sp/>a<sp/>class<sp/>header<sp/>through<sp/>the<sp/>use<sp/>of<sp/>ostream.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>It<sp/>also<sp/>will<sp/>output<sp/>the<sp/>program<sp/>description</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/><sp/>Call</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>------</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>The<sp/>function<sp/>call<sp/>requires<sp/>1<sp/>parameters.<sp/>The<sp/>following<sp/>example<sp/>uses<sp/>an</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>output<sp/>file<sp/>in<sp/>the<sp/>ostream<sp/>parameter.<sp/>Ex:</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PrintHeader<sp/>(oFile);</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>---------------------------------------------------------------------------<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/><sp/>Output</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/>--------</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/><sp/>The<sp/>function<sp/>will<sp/>output<sp/>as<sp/>follows.<sp/>Ex:</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>**********************************************************</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>PROGRAMMED<sp/>BY<sp/>:<sp/>Parsa<sp/>Khazravi<sp/>and<sp/>Nick<sp/>Reardon</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>CS1B</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>SECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>MW:<sp/>7:30pm</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Lab<sp/>#3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Functions<sp/>-<sp/>GCD</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*********************************************************</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*<sp/>---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*<sp/>CONSTANTS</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*<sp/>---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/>OUTPUT<sp/>-<sp/>USED<sp/>FOR<sp/>CLASS<sp/>HEADING</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/>---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*<sp/>PROGRAMMER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Name(s)<sp/>of<sp/>programmer(s)<sp/><sp/>-<sp/>Nick<sp/>Reardon</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*<sp/>SECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Class<sp/>times<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>MW<sp/>-<sp/>7:30p</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/>CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Class<sp/>label<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>CS1B</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*<sp/>PROGRAM_NUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>#<sp/>of<sp/>the<sp/>program</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*<sp/>PROGRAM_NAME<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Title<sp/>of<sp/>the<sp/>program</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*<sp/>PROGRAM_TYPE<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Type<sp/>of<sp/>program<sp/>-<sp/>Lab,<sp/>Assignment,<sp/>etc.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/>---------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*<sp/>MAX_OUTPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Max<sp/>movies<sp/>to<sp/>be<sp/>output<sp/>at<sp/>once</highlight></codeline>
+<codeline lineno="56" refid="_print_header_8h_1a6f47729e4fd4b4bb790e11aa31c9b60e" refkind="member"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_print_header_8h_1ae9981d5992758d37d3b4e2219e265095" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_print_header_8h_1a6f47729e4fd4b4bb790e11aa31c9b60e" kindref="member">PROGRAMMER</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Nick<sp/>Reardon&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58" refid="_print_header_8h_1ad28cee007826f68c0e78443c29dda6db" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_print_header_8h_1ae9981d5992758d37d3b4e2219e265095" kindref="member">SECTION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MW<sp/>-<sp/>2:30p&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59" refid="_print_header_8h_1a3986204e583aea24c9a570469c529453" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_print_header_8h_1ad28cee007826f68c0e78443c29dda6db" kindref="member">CLASS</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CS1D&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60" refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_print_header_8h_1a3986204e583aea24c9a570469c529453" kindref="member">PROGRAM_NUM</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="61" refid="_print_header_8h_1a7d59f9fb3394f5975195135214fe23ff" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" kindref="member">PROGRAM_NAME</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Extendable<sp/>Array&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="_print_header_8h_1a7d59f9fb3394f5975195135214fe23ff" kindref="member">PROGRAM_TYPE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Extra<sp/>Credit&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_print_header_8h_1ae816b12e943159a475172c4bc33fe125" kindref="member">PrintHeader</ref>(std::ostream<sp/>&amp;output,<sp/>std::string<sp/>inputText)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>typeNum<sp/>=<sp/><ref refid="_print_header_8h_1a7d59f9fb3394f5975195135214fe23ff" kindref="member">PROGRAM_TYPE</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>#&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="_print_header_8h_1a3986204e583aea24c9a570469c529453" kindref="member">PROGRAM_NUM</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>&lt;&lt;<sp/>std::left</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::string(76,<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;*<sp/>PROGRAMMED<sp/>BY<sp/><sp/><sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_print_header_8h_1a6f47729e4fd4b4bb790e11aa31c9b60e" kindref="member">PROGRAMMER</ref><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;*<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::setw(16)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_print_header_8h_1ad28cee007826f68c0e78443c29dda6db" kindref="member">CLASS</ref><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;*<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::setw(16)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SECTION&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_print_header_8h_1ae9981d5992758d37d3b4e2219e265095" kindref="member">SECTION</ref><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;*<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::setw(16)<sp/>&lt;&lt;<sp/>typeNum<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" kindref="member">PROGRAM_NAME</ref><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::string(76,<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::string(((76<sp/>-<sp/>typeNum.length()<sp/>-<sp/><ref refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" kindref="member">PROGRAM_NAME</ref>.length()<sp/>)<sp/>/<sp/>2),<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>typeNum<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" kindref="member">PROGRAM_NAME</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::ifstream(inputText).rdbuf()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::string(76,<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_PRINTHEADER_H_</highlight></codeline>
+    </programlisting>
+    <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/PrintHeader.h"/>
+  </compounddef>
+</doxygen>

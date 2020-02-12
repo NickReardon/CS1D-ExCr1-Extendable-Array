@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_except" kind="class"><name>Except</name>
+    <member refid="class_except_1a2f8500c8457e0151dc636587832484c2" kind="variable"><name>error_number</name></member>
+    <member refid="class_except_1aea3535149295845a2af90f9afbe31ec3" kind="variable"><name>error_offset</name></member>
+    <member refid="class_except_1a83a085cab6fa21855ad075bb774d1aad" kind="function"><name>Except</name></member>
+    <member refid="class_except_1a02478aeeca39db020e1f97ff95dfec67" kind="function"><name>~Except</name></member>
+    <member refid="class_except_1ad24a1526aeb28e96b303e84f41129d76" kind="function"><name>getErrorNumber</name></member>
+    <member refid="class_except_1adc97d93e4985f931ecf37fff4df69f5b" kind="function"><name>getErrorOffset</name></member>
+  </compound>
+  <compound refid="class_extendable_array" kind="class"><name>ExtendableArray</name>
+    <member refid="class_extendable_array_1a4c66b2c30279973abd90e2c06016c59c" kind="variable"><name>typeAr</name></member>
+    <member refid="class_extendable_array_1a4aeb6c16105662c2f85bfa5082dfd48b" kind="variable"><name>capacity</name></member>
+    <member refid="class_extendable_array_1a6817ce9066c319e08362f56f2d5351f6" kind="variable"><name>currentSize</name></member>
+    <member refid="class_extendable_array_1a3d91922a5639d1d406ffdf9b3641fe6d" kind="variable"><name>frontIndex</name></member>
+    <member refid="class_extendable_array_1a505ae26294778d5b0848450a91d79785" kind="variable"><name>endIndex</name></member>
+    <member refid="class_extendable_array_1a6cfccf1bfc24b3a448d0893c6751e0c3" kind="function"><name>shiftRight</name></member>
+    <member refid="class_extendable_array_1af8ad78eead133d52363e464a9232ac58" kind="function"><name>shiftLeft</name></member>
+    <member refid="class_extendable_array_1a9832b9126121a36be4dcaddec9f597c3" kind="function"><name>expand</name></member>
+    <member refid="class_extendable_array_1afede9341c3d88aa3bf7f679337ba4665" kind="function"><name>adjustedIndex</name></member>
+    <member refid="class_extendable_array_1acc2f40b7a0f0d71b28ecdc127ed9a226" kind="function"><name>destroy</name></member>
+    <member refid="class_extendable_array_1adc71c6a57932fa86be831b9ecd42f4f2" kind="function"><name>ExtendableArray</name></member>
+    <member refid="class_extendable_array_1ab834d209e5ece1688a37f171c2e7fef4" kind="function"><name>ExtendableArray</name></member>
+    <member refid="class_extendable_array_1af30c1e7c5825e1a3bd3e22841d0576e6" kind="function"><name>ExtendableArray</name></member>
+    <member refid="class_extendable_array_1a2ce77043b9bed73f390847c86d826d3b" kind="function"><name>~ExtendableArray</name></member>
+    <member refid="class_extendable_array_1ad78fe9087efabefa817d5f103da33bf6" kind="function"><name>clearAll</name></member>
+    <member refid="class_extendable_array_1a1bed66b41d67c88f36378ba4c3ac1ce0" kind="function"><name>empty</name></member>
+    <member refid="class_extendable_array_1a6ba293f42f7a185a9f0c6862b7122e59" kind="function"><name>full</name></member>
+    <member refid="class_extendable_array_1abf490fdc09ef547fdd23881b0df38def" kind="function"><name>size</name></member>
+    <member refid="class_extendable_array_1a2ad9b13d44a77ec554d3942247545497" kind="function"><name>insertAt</name></member>
+    <member refid="class_extendable_array_1af56d3d48621d8e59f6a135d28d6801c4" kind="function"><name>insertFront</name></member>
+    <member refid="class_extendable_array_1a8b5ae2d65fdcdbd5f9096a1124f7b1f6" kind="function"><name>insertBack</name></member>
+    <member refid="class_extendable_array_1a68aa2fe55eb2c257821cf3f0cf693d99" kind="function"><name>eraseFront</name></member>
+    <member refid="class_extendable_array_1acc592524a2aab644b87022231401e7ca" kind="function"><name>eraseBack</name></member>
+    <member refid="class_extendable_array_1a644089eac144696f7fa2d602056c140e" kind="function"><name>front</name></member>
+    <member refid="class_extendable_array_1ac85a73af195a8d0655a3b747a41dd597" kind="function"><name>back</name></member>
+    <member refid="class_extendable_array_1aaca481cc5e183973bf436ba6ee9ccb0d" kind="function"><name>at</name></member>
+    <member refid="class_extendable_array_1a30adffe932c4e44aa845de81e4ec668c" kind="function"><name>operator[]</name></member>
+    <member refid="class_extendable_array_1a6a4958da3a63aef59824a43f568b2962" kind="function"><name>printAll</name></member>
+    <member refid="class_extendable_array_1a2ce4ac180096dc12153c4f832d8a1d9e" kind="function"><name>PrintWithLabel</name></member>
+  </compound>
+  <compound refid="_except_8h" kind="file"><name>Except.h</name>
+    <member refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688" kind="enum"><name>ERROR_TYPE</name></member>
+    <member refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ab479f80abbb32c4af05713d69f3be5af" kind="enumvalue"><name>DEFUALT</name></member>
+    <member refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ad08f8ac0aa8dfb59589824359772459e" kind="enumvalue"><name>FULL</name></member>
+    <member refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a2f0d18fc0d0fa4a6cd92dc328501874d" kind="enumvalue"><name>EMPTY</name></member>
+    <member refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a3f26dd98dc0ab63a635667a0c49fc709" kind="enumvalue"><name>OUT_OF_RANGE</name></member>
+  </compound>
+  <compound refid="_extendable_array_8h" kind="file"><name>ExtendableArray.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main_8h" kind="file"><name>main.h</name>
+  </compound>
+  <compound refid="_print_header_8h" kind="file"><name>PrintHeader.h</name>
+    <member refid="_print_header_8h_1a6f47729e4fd4b4bb790e11aa31c9b60e" kind="variable"><name>PROGRAMMER</name></member>
+    <member refid="_print_header_8h_1ae9981d5992758d37d3b4e2219e265095" kind="variable"><name>SECTION</name></member>
+    <member refid="_print_header_8h_1ad28cee007826f68c0e78443c29dda6db" kind="variable"><name>CLASS</name></member>
+    <member refid="_print_header_8h_1a3986204e583aea24c9a570469c529453" kind="variable"><name>PROGRAM_NUM</name></member>
+    <member refid="_print_header_8h_1a33dbe53fd735ff7e09e2d563b243ee31" kind="variable"><name>PROGRAM_NAME</name></member>
+    <member refid="_print_header_8h_1a7d59f9fb3394f5975195135214fe23ff" kind="variable"><name>PROGRAM_TYPE</name></member>
+    <member refid="_print_header_8h_1ae816b12e943159a475172c4bc33fe125" kind="function"><name>PrintHeader</name></member>
+  </compound>
+  <compound refid="dir_6b3743d9d21ccd6198c348ce96caa674" kind="dir"><name>repos/CS1D ExCr1 Extendable Array</name>
+  </compound>
+  <compound refid="dir_01774424b5e933ef128869bae162efb5" kind="dir"><name>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array</name>
+  </compound>
+  <compound refid="dir_5c1f77b6d547333da17420fc98c4f94a" kind="dir"><name>repos</name>
+  </compound>
+</doxygenindex>

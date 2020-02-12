@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_5c1f77b6d547333da17420fc98c4f94a" kind="dir">
+    <compoundname>repos</compoundname>
+    <innerdir refid="dir_6b3743d9d21ccd6198c348ce96caa674">repos/CS1D ExCr1 Extendable Array</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="repos/"/>
+  </compounddef>
+</doxygen>

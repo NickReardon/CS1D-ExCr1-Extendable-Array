@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_except_8h" kind="file" language="C++">
+    <compoundname>Except.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">exception</includes>
+    <includedby refid="_extendable_array_8h" local="yes">repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/ExtendableArray.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>exception</label>
+      </node>
+      <node id="1">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h</label>
+        <link refid="_except_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/ExtendableArray.h</label>
+        <link refid="_extendable_array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h</label>
+        <link refid="_except_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_except" prot="public">Except</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ERROR_TYPE</name>
+        <enumvalue id="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ab479f80abbb32c4af05713d69f3be5af" prot="public">
+          <name>DEFUALT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ad08f8ac0aa8dfb59589824359772459e" prot="public">
+          <name>FULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a2f0d18fc0d0fa4a6cd92dc328501874d" prot="public">
+          <name>EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a3f26dd98dc0ab63a635667a0c49fc709" prot="public">
+          <name>OUT_OF_RANGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="18" column="1" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="17" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>AUTHOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Nick<sp/>Reardon</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Extra<sp/>Credit<sp/>#1<sp/><sp/>:<sp/>Extendable<sp/>Array</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>CS1D</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>SECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>MW<sp/>-<sp/>2:30p</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>DUE<sp/>DATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>02<sp/>/<sp/>12<sp/>/<sp/>20</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_EXCEPT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_EXCEPT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688" kindref="member">ERROR_TYPE</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ab479f80abbb32c4af05713d69f3be5af" kindref="member">DEFUALT</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ad08f8ac0aa8dfb59589824359772459e" kindref="member">FULL</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a3f26dd98dc0ab63a635667a0c49fc709" kindref="member">OUT_OF_RANGE</ref></highlight></codeline>
+<codeline lineno="24" refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ab479f80abbb32c4af05713d69f3be5af" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25" refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688ad08f8ac0aa8dfb59589824359772459e" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a2f0d18fc0d0fa4a6cd92dc328501874d" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_except_8h_1ac08bb67be4b97cae8b7d5bf3b66fb688a3f26dd98dc0ab63a635667a0c49fc709" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_except" kindref="compound">Except</ref><sp/>:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="class_except_1a2f8500c8457e0151dc636587832484c2" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_except_1aea3535149295845a2af90f9afbe31ec3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_except_1a2f8500c8457e0151dc636587832484c2" kindref="member">error_number</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_except_1aea3535149295845a2af90f9afbe31ec3" kindref="member">error_offset</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_except_1a83a085cab6fa21855ad075bb774d1aad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_except_1a83a085cab6fa21855ad075bb774d1aad" kindref="member">Except</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>msg,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err_num,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err_off)<sp/>:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::runtime_error(msg)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_except_1a2f8500c8457e0151dc636587832484c2" kindref="member">error_number</ref><sp/>=<sp/>err_num;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_except_1aea3535149295845a2af90f9afbe31ec3" kindref="member">error_offset</ref><sp/>=<sp/>err_off;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_except_1a02478aeeca39db020e1f97ff95dfec67" kindref="member">~Except</ref>()<sp/>throw<sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_except_1ad24a1526aeb28e96b303e84f41129d76" kindref="member">getErrorNumber</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>throw()<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_except_1a2f8500c8457e0151dc636587832484c2" kindref="member">error_number</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_except_1adc97d93e4985f931ecf37fff4df69f5b" kindref="member">getErrorOffset</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>throw()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_except_1aea3535149295845a2af90f9afbe31ec3" kindref="member">error_offset</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!_EXCEPT_H_</highlight></codeline>
+    </programlisting>
+    <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h"/>
+  </compounddef>
+</doxygen>

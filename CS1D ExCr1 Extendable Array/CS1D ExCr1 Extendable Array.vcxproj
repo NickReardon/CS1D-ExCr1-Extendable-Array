@@ -115,6 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Except.h" />
+    <ClInclude Include="ExtendableArray.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="PrintHeader.h" />
   </ItemGroup>

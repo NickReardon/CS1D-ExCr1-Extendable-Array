@@ -20,7 +20,18 @@ int main()
 
 	/********************************************************************/
 
+	ExtendableArray<int> arr;
 
+
+	for (int i = 0; i < 21; i++)
+	{
+		arr.insertBack(i);
+	}
+
+	arr.insertAt(15, 100000);
+
+	cout << endl;
+	arr.printAll(cout);
 
 	system("pause");
 	return 0;

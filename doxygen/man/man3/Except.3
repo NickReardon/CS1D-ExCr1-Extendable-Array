@@ -1,0 +1,106 @@
+.TH "Except" 3 "Wed Feb 12 2020" "Version 1" "CS1D - Extra Credit 1  - Extendable Array" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Except
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Except\&.h>\fP
+.PP
+Inherits runtime_error\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExcept\fP (const std::string &msg, int err_num, int err_off)"
+.br
+.ti -1c
+.RI "virtual \fB~Except\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual int \fBgetErrorNumber\fP () const  throw ()"
+.br
+.ti -1c
+.RI "virtual int \fBgetErrorOffset\fP () const  throw ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBerror_number\fP"
+.br
+.RI "Error number\&. "
+.ti -1c
+.RI "int \fBerror_offset\fP"
+.br
+.RI "Error offset\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 26 of file Except\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Except::Except (const std::string & msg, int err_num, int err_off)\fC [inline]\fP, \fC [explicit]\fP"
+Constructor (C++ STL string, int, int)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The error message 
+.br
+\fIerr_num\fP Error number 
+.br
+\fIerr_off\fP Error offset 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file Except\&.h\&.
+.SS "virtual Except::~Except ()\fC [inline]\fP, \fC [virtual]\fP"
+Destructor\&. Virtual to allow for subclassing\&. 
+.PP
+Definition at line 52 of file Except\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual int Except::getErrorNumber () const\fC [inline]\fP, \fC [virtual]\fP"
+Returns error number\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBerror_number\fP 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file Except\&.h\&.
+.SS "virtual int Except::getErrorOffset () const\fC [inline]\fP, \fC [virtual]\fP"
+Returns error offset\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBerror_offset\fP 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file Except\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Except::error_number\fC [protected]\fP"
+
+.PP
+Error number\&. 
+.PP
+Definition at line 30 of file Except\&.h\&.
+.SS "int Except::error_offset\fC [protected]\fP"
+
+.PP
+Error offset\&. 
+.PP
+Definition at line 31 of file Except\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Extra Credit 1 - Extendable Array from the source code\&.

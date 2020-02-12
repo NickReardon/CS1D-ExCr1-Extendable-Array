@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_except">
+<title>Except Class Reference</title>
+<indexterm><primary>Except</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Except.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Except:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_except__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Except:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_except__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_except_1a83a085cab6fa21855ad075bb774d1aad">Except</link> (const std::string &amp;msg, int err_num, int err_off)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_except_1a02478aeeca39db020e1f97ff95dfec67">~Except</link> ()  throw ()</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_class_except_1ad24a1526aeb28e96b303e84f41129d76">getErrorNumber</link> () const  throw ()</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_class_except_1adc97d93e4985f931ecf37fff4df69f5b">getErrorOffset</link> () const  throw ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_except_1a2f8500c8457e0151dc636587832484c2">error_number</link></para>
+
+<para>Error number. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_except_1aea3535149295845a2af90f9afbe31ec3">error_offset</link></para>
+
+<para>Error offset. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 26 of file Except.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_except_1a83a085cab6fa21855ad075bb774d1aad"/>    <section>
+    <title>Except()</title>
+<indexterm><primary>Except</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>Except</secondary></indexterm>
+<para><computeroutput>Except::Except (const std::string &amp; msg, int err_num, int err_off)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para>
+<para>Constructor (C++ STL string, int, int). 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>msg</entry>
+                                <entry>
+<para>The error message </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>err_num</entry>
+                                <entry>
+<para>Error number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>err_off</entry>
+                                <entry>
+<para>Error offset </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 41 of file Except.h.</para>
+    </section><anchor xml:id="_class_except_1a02478aeeca39db020e1f97ff95dfec67"/>    <section>
+    <title>~Except()</title>
+<indexterm><primary>~Except</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>~Except</secondary></indexterm>
+<para><computeroutput>virtual Except::~Except ( ) throw ( ) <computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Destructor. Virtual to allow for subclassing. </para>
+<para>
+Definition at line 52 of file Except.h.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_except_1ad24a1526aeb28e96b303e84f41129d76"/>    <section>
+    <title>getErrorNumber()</title>
+<indexterm><primary>getErrorNumber</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>getErrorNumber</secondary></indexterm>
+<para><computeroutput>virtual int Except::getErrorNumber ( ) const throw ( ) <computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Returns error number. <formalpara><title>Returns</title>
+
+<para><link linkend="_class_except_1a2f8500c8457e0151dc636587832484c2">error_number</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 57 of file Except.h.</para>
+    </section><anchor xml:id="_class_except_1adc97d93e4985f931ecf37fff4df69f5b"/>    <section>
+    <title>getErrorOffset()</title>
+<indexterm><primary>getErrorOffset</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>getErrorOffset</secondary></indexterm>
+<para><computeroutput>virtual int Except::getErrorOffset ( ) const throw ( ) <computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Returns error offset. <formalpara><title>Returns</title>
+
+<para><link linkend="_class_except_1aea3535149295845a2af90f9afbe31ec3">error_offset</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 64 of file Except.h.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_except_1a2f8500c8457e0151dc636587832484c2"/>    <section>
+    <title>error_number</title>
+<indexterm><primary>error_number</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>error_number</secondary></indexterm>
+<para><computeroutput>int Except::error_number<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Error number. </para>
+</para>
+<para>
+Definition at line 30 of file Except.h.</para>
+    </section><anchor xml:id="_class_except_1aea3535149295845a2af90f9afbe31ec3"/>    <section>
+    <title>error_offset</title>
+<indexterm><primary>error_offset</primary><secondary>Except</secondary></indexterm>
+<indexterm><primary>Except</primary><secondary>error_offset</secondary></indexterm>
+<para><computeroutput>int Except::error_offset<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Error offset. </para>
+</para>
+<para>
+Definition at line 31 of file Except.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/<link linkend="__except_8h">Except.h</link></section>
+</section>

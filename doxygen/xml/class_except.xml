@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_except" kind="class" language="C++" prot="public">
+    <compoundname>Except</compoundname>
+    <basecompoundref prot="public" virt="virtual">runtime_error</basecompoundref>
+    <includes refid="_except_8h" local="no">Except.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_except_1a2f8500c8457e0151dc636587832484c2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Except::error_number</definition>
+        <argsstring></argsstring>
+        <name>error_number</name>
+        <briefdescription>
+<para>Error number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="30" column="5" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_except_1aea3535149295845a2af90f9afbe31ec3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Except::error_offset</definition>
+        <argsstring></argsstring>
+        <name>error_offset</name>
+        <briefdescription>
+<para>Error offset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="31" column="5" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_except_1a83a085cab6fa21855ad075bb774d1aad" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Except::Except</definition>
+        <argsstring>(const std::string &amp;msg, int err_num, int err_off)</argsstring>
+        <name>Except</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>err_num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>err_off</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (C++ STL string, int, int). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>err_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>err_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="41" column="1" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_except_1a02478aeeca39db020e1f97ff95dfec67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Except::~Except</definition>
+        <argsstring>()</argsstring>
+        <name>~Except</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. Virtual to allow for subclassing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="52" column="9" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_except_1ad24a1526aeb28e96b303e84f41129d76" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Except::getErrorNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorNumber</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns error number. <simplesect kind="return"><para><ref refid="class_except_1a2f8500c8457e0151dc636587832484c2" kindref="member">error_number</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="57" column="13" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_except_1adc97d93e4985f931ecf37fff4df69f5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Except::getErrorOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorOffset</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns error offset. <simplesect kind="return"><para><ref refid="class_except_1aea3535149295845a2af90f9afbe31ec3" kindref="member">error_offset</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="64" column="13" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+      <node id="1">
+        <label>Except</label>
+        <link refid="class_except"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+      <node id="1">
+        <label>Except</label>
+        <link refid="class_except"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" line="26" column="47" bodyfile="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/Except.h" bodystart="26" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_except_1a2f8500c8457e0151dc636587832484c2" prot="protected" virt="non-virtual"><scope>Except</scope><name>error_number</name></member>
+      <member refid="class_except_1aea3535149295845a2af90f9afbe31ec3" prot="protected" virt="non-virtual"><scope>Except</scope><name>error_offset</name></member>
+      <member refid="class_except_1a83a085cab6fa21855ad075bb774d1aad" prot="public" virt="non-virtual"><scope>Except</scope><name>Except</name></member>
+      <member refid="class_except_1ad24a1526aeb28e96b303e84f41129d76" prot="public" virt="virtual"><scope>Except</scope><name>getErrorNumber</name></member>
+      <member refid="class_except_1adc97d93e4985f931ecf37fff4df69f5b" prot="public" virt="virtual"><scope>Except</scope><name>getErrorOffset</name></member>
+      <member refid="class_except_1a02478aeeca39db020e1f97ff95dfec67" prot="public" virt="virtual"><scope>Except</scope><name>~Except</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

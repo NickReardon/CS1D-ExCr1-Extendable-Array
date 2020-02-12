@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_01774424b5e933ef128869bae162efb5" kind="dir">
+    <compoundname>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array</compoundname>
+    <innerfile refid="_except_8h">Except.h</innerfile>
+    <innerfile refid="_extendable_array_8h">ExtendableArray.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="main_8h">main.h</innerfile>
+    <innerfile refid="_print_header_8h">PrintHeader.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/"/>
+  </compounddef>
+</doxygen>

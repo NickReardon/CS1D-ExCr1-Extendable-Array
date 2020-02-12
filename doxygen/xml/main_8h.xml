@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="main_8h" kind="file" language="C++">
+    <compoundname>main.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">string</includes>
+    <includes refid="_print_header_8h" local="yes">PrintHeader.h</includes>
+    <includes refid="_extendable_array_8h" local="yes">ExtendableArray.h</includes>
+    <includedby refid="main_8cpp" local="yes">repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>iomanip</label>
+      </node>
+      <node id="1">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>exception</label>
+      </node>
+      <node id="6">
+        <label>ExtendableArray.h</label>
+        <link refid="_extendable_array_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PrintHeader.h</label>
+        <link refid="_print_header_8h"/>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="_except_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>AUTHOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Nick<sp/>Reardon</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Extra<sp/>Credit<sp/>#1<sp/><sp/>:<sp/>Extendable<sp/>Array</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>CLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>CS1D</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>SECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>MW<sp/>-<sp/>2:30p</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>DUE<sp/>DATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>02<sp/>/<sp/>12<sp/>/<sp/>20</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_MAIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MAIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//Standard<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_print_header_8h" kindref="compound">PrintHeader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//Program<sp/>Specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_extendable_array_8h" kindref="compound">ExtendableArray.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_HEADER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/main.h"/>
+  </compounddef>
+</doxygen>

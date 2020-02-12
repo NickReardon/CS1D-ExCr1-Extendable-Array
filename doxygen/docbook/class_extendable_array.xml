@@ -1,0 +1,1243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_extendable_array">
+<title>ExtendableArray&lt; Type &gt; Class Template Reference</title>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary></indexterm>
+<para>
+
+<para>Extendable circular array template class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ExtendableArray.h&gt;</computeroutput>
+</para>
+Collaboration diagram for ExtendableArray&lt; Type &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_extendable_array__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_extendable_array_1adc71c6a57932fa86be831b9ecd42f4f2">ExtendableArray</link> (const int newCapacity=8)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_extendable_array_1ab834d209e5ece1688a37f171c2e7fef4">ExtendableArray</link> (const <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt; &amp;otherExArray)</para>
+
+<para>Copy Constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_extendable_array_1af30c1e7c5825e1a3bd3e22841d0576e6">ExtendableArray</link> (const Type *ptrArray, const int arSize)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_extendable_array_1a2ce77043b9bed73f390847c86d826d3b">~ExtendableArray</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1ad78fe9087efabefa817d5f103da33bf6">clearAll</link> (const int newCapacity=<link linkend="_class_extendable_array_1a4aeb6c16105662c2f85bfa5082dfd48b">capacity</link>)</para>
+
+<para>Deletes current array and allocates a new one with a given capacity. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_extendable_array_1a1bed66b41d67c88f36378ba4c3ac1ce0">empty</link> () const</para>
+
+<para>evaluates if the array is empty or not </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_extendable_array_1a6ba293f42f7a185a9f0c6862b7122e59">full</link> () const</para>
+
+<para>evaluates if the array is full or not </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1abf490fdc09ef547fdd23881b0df38def">size</link> () const</para>
+
+<para>Gets the size. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1a2ad9b13d44a77ec554d3942247545497">insertAt</link> (const int givenIndex, const Type &amp;newItem)</para>
+
+<para>Inserts the value at the given index ( after adjustment ) </para>
+</listitem>
+            <listitem><para>template&lt;class Type &gt; </para><para>void <link linkend="_class_extendable_array_1af56d3d48621d8e59f6a135d28d6801c4">insertFront</link> (const Type &amp;newItem)</para>
+
+<para>Inserts the paramater value at the front of the array. </para>
+</listitem>
+            <listitem><para>template&lt;class Type &gt; </para><para>void <link linkend="_class_extendable_array_1a8b5ae2d65fdcdbd5f9096a1124f7b1f6">insertBack</link> (const Type &amp;newItem)</para>
+
+<para>Inserts the paramater value at the end of the array. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1a68aa2fe55eb2c257821cf3f0cf693d99">eraseFront</link> ()</para>
+
+<para>Erase the value at the front of the array. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1acc592524a2aab644b87022231401e7ca">eraseBack</link> ()</para>
+
+<para>Erase the value at the end of the array. </para>
+</listitem>
+            <listitem><para>Type <link linkend="_class_extendable_array_1a644089eac144696f7fa2d602056c140e">front</link> () const</para>
+
+<para>Gets the value at the front of the array. </para>
+</listitem>
+            <listitem><para>Type <link linkend="_class_extendable_array_1ac85a73af195a8d0655a3b747a41dd597">back</link> () const</para>
+
+<para>Gets the value at the end of the array. </para>
+</listitem>
+            <listitem><para>Type &amp; <link linkend="_class_extendable_array_1aaca481cc5e183973bf436ba6ee9ccb0d">at</link> (const int index) const</para>
+
+<para>Accesses the value at the given index ( after adjustment ) </para>
+</listitem>
+            <listitem><para>Type &amp; <link linkend="_class_extendable_array_1a30adffe932c4e44aa845de81e4ec668c">operator[]</link> (const int index) const</para>
+
+<para>Array indexer operator ( adjusted inside ) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1a6a4958da3a63aef59824a43f568b2962">printAll</link> (std::ostream &amp;output) const</para>
+
+<para>Print all values in the valid array range line by line. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1a2ce4ac180096dc12153c4f832d8a1d9e">PrintWithLabel</link> (const std::string &amp;label, std::ostream &amp;output) const</para>
+
+<para>Allows a string to be passed to output before calling the printAll method. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_extendable_array_1a6cfccf1bfc24b3a448d0893c6751e0c3">shiftRight</link> (const int givenIndex)</para>
+
+<para>tracks the last index of the circular array </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1af8ad78eead133d52363e464a9232ac58">shiftLeft</link> (const int givenIndex)</para>
+
+<para>Shift array members left/down, wrapping around to the end. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1a9832b9126121a36be4dcaddec9f597c3">expand</link> (const int minIncrease=1)</para>
+
+<para>Expands the array to accomodate a given minimum increase. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1afede9341c3d88aa3bf7f679337ba4665">adjustedIndex</link> (const int givenIndex) const</para>
+
+<para>Given a normal index ( 0 .. capacity ) return the adjusted index to accomodate the circular array. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_extendable_array_1acc2f40b7a0f0d71b28ecdc127ed9a226">destroy</link> ()</para>
+
+<para>Deletes the array. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Type * <link linkend="_class_extendable_array_1a4c66b2c30279973abd90e2c06016c59c">typeAr</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1a4aeb6c16105662c2f85bfa5082dfd48b">capacity</link></para>
+
+<para>Template datatype pointer for array allocation. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1a6817ce9066c319e08362f56f2d5351f6">currentSize</link></para>
+
+<para>The current reserved memory locations of the array. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1a3d91922a5639d1d406ffdf9b3641fe6d">frontIndex</link></para>
+
+<para>count of used indeces in the array </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_extendable_array_1a505ae26294778d5b0848450a91d79785">endIndex</link></para>
+
+<para>tracks the first index of the circular array </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Type&gt;
+class ExtendableArray&lt; Type &gt;</title></simplesect>
+
+
+<para>Extendable circular array template class. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Nick Reardon </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>11/25/2020</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 25 of file ExtendableArray.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_extendable_array_1adc71c6a57932fa86be831b9ecd42f4f2"/>    <section>
+    <title>ExtendableArray()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>ExtendableArray</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>ExtendableArray</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput><link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::<link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt; (const int newCapacity = <computeroutput>8</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para><literallayout><computeroutput>        @par    Creates empty array of either a specified capacity or uses the default value if
+        not provided
+</computeroutput></literallayout></para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>Template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newCapacity</entry>
+                                <entry>
+<para>(Optional) The new capacity. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 259 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1ab834d209e5ece1688a37f171c2e7fef4"/>    <section>
+    <title>ExtendableArray()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>ExtendableArray</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>ExtendableArray</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput><link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::<link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt; (const <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt; &amp; otherExArray)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Copy Constructor. </para>
+</para>
+
+<para><literallayout><computeroutput>        @par    Copies the values of the contents of another ExtendableArray into this one
+</computeroutput></literallayout></para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>Template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>otherExArray</entry>
+                                <entry>
+<para>The other array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 277 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1af30c1e7c5825e1a3bd3e22841d0576e6"/>    <section>
+    <title>ExtendableArray()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>ExtendableArray</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>ExtendableArray</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput><link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::<link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt; (const Type * ptrArray, const int arSize)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para><literallayout><computeroutput>        @par Copies the values of the contents of a given array into this one
+</computeroutput></literallayout></para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>Template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ptrArray</entry>
+                                <entry>
+<para>array to copy values from. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>arSize</entry>
+                                <entry>
+<para>size of the given array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 313 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a2ce77043b9bed73f390847c86d826d3b"/>    <section>
+    <title>~ExtendableArray()</title>
+<indexterm><primary>~ExtendableArray</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>~ExtendableArray</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput><link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::~<link linkend="_class_extendable_array">ExtendableArray</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+<para>
+Definition at line 343 of file ExtendableArray.h.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_extendable_array_1afede9341c3d88aa3bf7f679337ba4665"/>    <section>
+    <title>adjustedIndex()</title>
+<indexterm><primary>adjustedIndex</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>adjustedIndex</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::adjustedIndex (const int givenIndex) const<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Given a normal index ( 0 .. capacity ) return the adjusted index to accomodate the circular array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty <link linkend="_class_except">Except</link> Exception index is out of range.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>givenIndex</entry>
+                                <entry>
+<para>Zero-based index of the given. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int the adjusted index. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 198 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1aaca481cc5e183973bf436ba6ee9ccb0d"/>    <section>
+    <title>at()</title>
+<indexterm><primary>at</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>Type &amp; <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::at (const int index) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Accesses the value at the given index ( after adjustment ) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>Zero-based index of the array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>&lt;Type&gt; the index value. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 639 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1ac85a73af195a8d0655a3b747a41dd597"/>    <section>
+    <title>back()</title>
+<indexterm><primary>back</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>back</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>Type <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::back ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the value at the end of the array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>&lt;Type&gt; the end index value. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 620 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1ad78fe9087efabefa817d5f103da33bf6"/>    <section>
+    <title>clearAll()</title>
+<indexterm><primary>clearAll</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>clearAll</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::clearAll (const int newCapacity = <computeroutput><link linkend="_class_extendable_array_1a4aeb6c16105662c2f85bfa5082dfd48b">capacity</link></computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Deletes current array and allocates a new one with a given capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newCapacity</entry>
+                                <entry>
+<para>(Optional) The capacity for the new array Can be left out to use current capacity. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 359 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1acc2f40b7a0f0d71b28ecdc127ed9a226"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>destroy</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::destroy ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Deletes the array. </para>
+</para>
+<para>
+Definition at line 238 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a1bed66b41d67c88f36378ba4c3ac1ce0"/>    <section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>empty</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>evaluates if the array is empty or not </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True / False. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 376 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1acc592524a2aab644b87022231401e7ca"/>    <section>
+    <title>eraseBack()</title>
+<indexterm><primary>eraseBack</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>eraseBack</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::eraseBack ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Erase the value at the end of the array. </para>
+</para>
+
+<para><literallayout><computeroutput>        @par    Moves the endIndex value to the right, excluding the value from the valid range
+        in the array
+</computeroutput></literallayout></para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Thrown when an except error condition occurs. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 566 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a68aa2fe55eb2c257821cf3f0cf693d99"/>    <section>
+    <title>eraseFront()</title>
+<indexterm><primary>eraseFront</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>eraseFront</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::eraseFront ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Erase the value at the front of the array. </para>
+</para>
+
+<para><literallayout><computeroutput>        @par    Moves the frontIndex value to the right, excluding the value from the valid
+        range in the array
+</computeroutput></literallayout></para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Thrown when an except error condition occurs. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 527 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a9832b9126121a36be4dcaddec9f597c3"/>    <section>
+    <title>expand()</title>
+<indexterm><primary>expand</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>expand</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::expand (const int minIncrease = <computeroutput>1</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Expands the array to accomodate a given minimum increase. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>minIncrease</entry>
+                                <entry>
+<para>(Optional) The minimum increase. Supports larger increases (e.g. adding multiple instances at once ) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 148 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a644089eac144696f7fa2d602056c140e"/>    <section>
+    <title>front()</title>
+<indexterm><primary>front</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>front</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>Type <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::front ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the value at the front of the array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>&lt;Type&gt; the front index value. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 600 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a6ba293f42f7a185a9f0c6862b7122e59"/>    <section>
+    <title>full()</title>
+<indexterm><primary>full</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>full</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::full ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>evaluates if the array is full or not </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True / False. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 387 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a2ad9b13d44a77ec554d3942247545497"/>    <section>
+    <title>insertAt()</title>
+<indexterm><primary>insertAt</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>insertAt</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::insertAt (const int givenIndex, const Type &amp; newItem)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inserts the value at the given index ( after adjustment ) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>givenIndex</entry>
+                                <entry>
+<para>Zero-based index of the array. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>newItem</entry>
+                                <entry>
+<para>The new value to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 413 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a8b5ae2d65fdcdbd5f9096a1124f7b1f6"/>    <section>
+    <title>insertBack()</title>
+<indexterm><primary>insertBack</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>insertBack</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>template&lt; class Type &gt; void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::insertBack (const Type &amp; newItem)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inserts the paramater value at the end of the array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newItem</entry>
+                                <entry>
+<para>The new item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 490 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1af56d3d48621d8e59f6a135d28d6801c4"/>    <section>
+    <title>insertFront()</title>
+<indexterm><primary>insertFront</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>insertFront</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>template&lt; class Type &gt; void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::insertFront (const Type &amp; newItem)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inserts the paramater value at the front of the array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Type</entry>
+                                <entry>
+<para>template datatype. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newItem</entry>
+                                <entry>
+<para>The new item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 455 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a30adffe932c4e44aa845de81e4ec668c"/>    <section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>Type &amp; <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::operator[] (const int index) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Array indexer operator ( adjusted inside ) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>Zero-based index of the. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>&lt;Type&gt; the index value. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 651 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a6a4958da3a63aef59824a43f568b2962"/>    <section>
+    <title>printAll()</title>
+<indexterm><primary>printAll</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>printAll</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::printAll (std::ostream &amp; output) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Print all values in the valid array range line by line. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>output</entry>
+                                <entry>
+<para>ostream object ( cout, file, etc. ) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 664 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a2ce4ac180096dc12153c4f832d8a1d9e"/>    <section>
+    <title>PrintWithLabel()</title>
+<indexterm><primary>PrintWithLabel</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>PrintWithLabel</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::PrintWithLabel (const std::string &amp; label, std::ostream &amp; output) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Allows a string to be passed to output before calling the printAll method. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>                                </entry>                                <entry>label</entry>
+                                <entry>
+<para>The label. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>output</entry>
+                                <entry>
+<para>ostream object ( cout, file, etc. ) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 698 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1af8ad78eead133d52363e464a9232ac58"/>    <section>
+    <title>shiftLeft()</title>
+<indexterm><primary>shiftLeft</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>shiftLeft</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::shiftLeft (const int givenIndex)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Shift array members left/down, wrapping around to the end. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>givenIndex</entry>
+                                <entry>
+<para>int value passed from outside of the object index is adjusted for use in the method. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 101 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a6cfccf1bfc24b3a448d0893c6751e0c3"/>    <section>
+    <title>shiftRight()</title>
+<indexterm><primary>shiftRight</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>shiftRight</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>void <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::shiftRight (const int givenIndex)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>tracks the last index of the circular array </para>
+</para>
+
+<para>Shift array members right/up, wrapping around to the end</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry><link linkend="_class_except">Except</link></entry>
+                                <entry>
+<para>Exception thrown when class is empty.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>givenIndex</entry>
+                                <entry>
+<para>int value passed from outside of the object index is adjusted for use in the method. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 50 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1abf490fdc09ef547fdd23881b0df38def"/>    <section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the size. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An int. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 399 of file ExtendableArray.h.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_extendable_array_1a4aeb6c16105662c2f85bfa5082dfd48b"/>    <section>
+    <title>capacity</title>
+<indexterm><primary>capacity</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>capacity</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::capacity<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Template datatype pointer for array allocation. </para>
+</para>
+<para>
+Definition at line 30 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a6817ce9066c319e08362f56f2d5351f6"/>    <section>
+    <title>currentSize</title>
+<indexterm><primary>currentSize</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>currentSize</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::currentSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The current reserved memory locations of the array. </para>
+</para>
+<para>
+Definition at line 31 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a505ae26294778d5b0848450a91d79785"/>    <section>
+    <title>endIndex</title>
+<indexterm><primary>endIndex</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>endIndex</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::endIndex<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>tracks the first index of the circular array </para>
+</para>
+<para>
+Definition at line 34 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a3d91922a5639d1d406ffdf9b3641fe6d"/>    <section>
+    <title>frontIndex</title>
+<indexterm><primary>frontIndex</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>frontIndex</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>int <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::frontIndex<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>count of used indeces in the array </para>
+</para>
+<para>
+Definition at line 33 of file ExtendableArray.h.</para>
+    </section><anchor xml:id="_class_extendable_array_1a4c66b2c30279973abd90e2c06016c59c"/>    <section>
+    <title>typeAr</title>
+<indexterm><primary>typeAr</primary><secondary>ExtendableArray&lt; Type &gt;</secondary></indexterm>
+<indexterm><primary>ExtendableArray&lt; Type &gt;</primary><secondary>typeAr</secondary></indexterm>
+<computeroutput>template&lt;class Type &gt; </computeroutput><para><computeroutput>Type* <link linkend="_class_extendable_array">ExtendableArray</link>&lt; Type &gt;::typeAr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 28 of file ExtendableArray.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+repos/CS1D ExCr1 Extendable Array/CS1D ExCr1 Extendable Array/<link linkend="__extendable_array_8h">ExtendableArray.h</link></section>
+</section>

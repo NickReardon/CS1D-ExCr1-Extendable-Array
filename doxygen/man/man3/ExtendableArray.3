@@ -1,0 +1,621 @@
+.TH "ExtendableArray< Type >" 3 "Wed Feb 12 2020" "Version 1" "CS1D - Extra Credit 1  - Extendable Array" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExtendableArray< Type > \- Extendable circular array template class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ExtendableArray\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExtendableArray\fP (const int newCapacity=8)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBExtendableArray\fP (const \fBExtendableArray\fP< Type > &otherExArray)"
+.br
+.RI "Copy Constructor\&. "
+.ti -1c
+.RI "\fBExtendableArray\fP (const Type *ptrArray, const int arSize)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~ExtendableArray\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBclearAll\fP (const int newCapacity=\fBcapacity\fP)"
+.br
+.RI "Deletes current array and allocates a new one with a given capacity\&. "
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.RI "evaluates if the array is empty or not "
+.ti -1c
+.RI "bool \fBfull\fP () const"
+.br
+.RI "evaluates if the array is full or not "
+.ti -1c
+.RI "int \fBsize\fP () const"
+.br
+.RI "Gets the size\&. "
+.ti -1c
+.RI "void \fBinsertAt\fP (const int givenIndex, const Type &newItem)"
+.br
+.RI "Inserts the value at the given index ( after adjustment ) "
+.ti -1c
+.RI "template<class Type > void \fBinsertFront\fP (const Type &newItem)"
+.br
+.RI "Inserts the paramater value at the front of the array\&. "
+.ti -1c
+.RI "template<class Type > void \fBinsertBack\fP (const Type &newItem)"
+.br
+.RI "Inserts the paramater value at the end of the array\&. "
+.ti -1c
+.RI "void \fBeraseFront\fP ()"
+.br
+.RI "Erase the value at the front of the array\&. "
+.ti -1c
+.RI "void \fBeraseBack\fP ()"
+.br
+.RI "Erase the value at the end of the array\&. "
+.ti -1c
+.RI "Type \fBfront\fP () const"
+.br
+.RI "Gets the value at the front of the array\&. "
+.ti -1c
+.RI "Type \fBback\fP () const"
+.br
+.RI "Gets the value at the end of the array\&. "
+.ti -1c
+.RI "Type & \fBat\fP (const int index) const"
+.br
+.RI "Accesses the value at the given index ( after adjustment ) "
+.ti -1c
+.RI "Type & \fBoperator[]\fP (const int index) const"
+.br
+.RI "Array indexer operator ( adjusted inside ) "
+.ti -1c
+.RI "void \fBprintAll\fP (std::ostream &output) const"
+.br
+.RI "Print all values in the valid array range line by line\&. "
+.ti -1c
+.RI "void \fBPrintWithLabel\fP (const std::string &label, std::ostream &output) const"
+.br
+.RI "Allows a string to be passed to output before calling the printAll method\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBshiftRight\fP (const int givenIndex)"
+.br
+.RI "tracks the last index of the circular array "
+.ti -1c
+.RI "void \fBshiftLeft\fP (const int givenIndex)"
+.br
+.RI "Shift array members left/down, wrapping around to the end\&. "
+.ti -1c
+.RI "void \fBexpand\fP (const int minIncrease=1)"
+.br
+.RI "Expands the array to accomodate a given minimum increase\&. "
+.ti -1c
+.RI "int \fBadjustedIndex\fP (const int givenIndex) const"
+.br
+.RI "Given a normal index ( 0 \&.\&. capacity ) return the adjusted index to accomodate the circular array\&. "
+.ti -1c
+.RI "void \fBdestroy\fP ()"
+.br
+.RI "Deletes the array\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Type * \fBtypeAr\fP"
+.br
+.ti -1c
+.RI "int \fBcapacity\fP"
+.br
+.RI "Template datatype pointer for array allocation\&. "
+.ti -1c
+.RI "int \fBcurrentSize\fP"
+.br
+.RI "The current reserved memory locations of the array\&. "
+.ti -1c
+.RI "int \fBfrontIndex\fP"
+.br
+.RI "count of used indeces in the array "
+.ti -1c
+.RI "int \fBendIndex\fP"
+.br
+.RI "tracks the first index of the circular array "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class Type>
+.br
+class ExtendableArray< Type >"
+Extendable circular array template class\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Nick Reardon 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+11/25/2020
+.RE
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP template datatype\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file ExtendableArray\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class Type > \fBExtendableArray\fP< Type >::\fBExtendableArray\fP< Type > (const int newCapacity = \fC8\fP)\fC [inline]\fP"
+
+.PP
+Constructor\&. 
+.PP
+.nf
+        @par    Creates empty array of either a specified capacity or uses the default value if
+        not provided
+
+.fi
+.PP
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP Template datatype\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInewCapacity\fP (Optional) The new capacity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 259 of file ExtendableArray\&.h\&.
+.SS "template<class Type > \fBExtendableArray\fP< Type >::\fBExtendableArray\fP< Type > (const \fBExtendableArray\fP< Type > & otherExArray)\fC [inline]\fP"
+
+.PP
+Copy Constructor\&. 
+.PP
+.nf
+        @par    Copies the values of the contents of another ExtendableArray into this one
+
+.fi
+.PP
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP Template datatype\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIotherExArray\fP The other array\&. 
+.RE
+.PP
+
+.PP
+Definition at line 277 of file ExtendableArray\&.h\&.
+.SS "template<class Type > \fBExtendableArray\fP< Type >::\fBExtendableArray\fP< Type > (const Type * ptrArray, const int arSize)\fC [inline]\fP"
+
+.PP
+Constructor\&. 
+.PP
+.nf
+        @par Copies the values of the contents of a given array into this one
+
+.fi
+.PP
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP Template datatype\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIptrArray\fP array to copy values from\&. 
+.br
+\fIarSize\fP size of the given array\&. 
+.RE
+.PP
+
+.PP
+Definition at line 313 of file ExtendableArray\&.h\&.
+.SS "template<class Type > \fBExtendableArray\fP< Type >::~\fBExtendableArray\fP ()\fC [inline]\fP"
+
+.PP
+Destructor\&. 
+.PP
+Definition at line 343 of file ExtendableArray\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::adjustedIndex (const int givenIndex) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Given a normal index ( 0 \&.\&. capacity ) return the adjusted index to accomodate the circular array\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty \fBExcept\fP Exception index is out of range\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIgivenIndex\fP Zero-based index of the given\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int the adjusted index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 198 of file ExtendableArray\&.h\&.
+.SS "template<class Type > Type & \fBExtendableArray\fP< Type >::at (const int index) const\fC [inline]\fP"
+
+.PP
+Accesses the value at the given index ( after adjustment ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Zero-based index of the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+<Type> the index value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 639 of file ExtendableArray\&.h\&.
+.SS "template<class Type > Type \fBExtendableArray\fP< Type >::back () const\fC [inline]\fP"
+
+.PP
+Gets the value at the end of the array\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+<Type> the end index value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 620 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::clearAll (const int newCapacity = \fC\fBcapacity\fP\fP)\fC [inline]\fP"
+
+.PP
+Deletes current array and allocates a new one with a given capacity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewCapacity\fP (Optional) The capacity for the new array Can be left out to use current capacity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 359 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::destroy ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Deletes the array\&. 
+.PP
+Definition at line 238 of file ExtendableArray\&.h\&.
+.SS "template<class Type > bool \fBExtendableArray\fP< Type >::empty () const\fC [inline]\fP"
+
+.PP
+evaluates if the array is empty or not 
+.PP
+\fBReturns\fP
+.RS 4
+True / False\&. 
+.RE
+.PP
+
+.PP
+Definition at line 376 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::eraseBack ()\fC [inline]\fP"
+
+.PP
+Erase the value at the end of the array\&. 
+.PP
+.nf
+        @par    Moves the endIndex value to the right, excluding the value from the valid range
+        in the array
+
+.fi
+.PP
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Thrown when an except error condition occurs\&. 
+.RE
+.PP
+
+.PP
+Definition at line 566 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::eraseFront ()\fC [inline]\fP"
+
+.PP
+Erase the value at the front of the array\&. 
+.PP
+.nf
+        @par    Moves the frontIndex value to the right, excluding the value from the valid
+        range in the array
+
+.fi
+.PP
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Thrown when an except error condition occurs\&. 
+.RE
+.PP
+
+.PP
+Definition at line 527 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::expand (const int minIncrease = \fC1\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Expands the array to accomodate a given minimum increase\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIminIncrease\fP (Optional) The minimum increase\&. Supports larger increases (e\&.g\&. adding multiple instances at once ) 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file ExtendableArray\&.h\&.
+.SS "template<class Type > Type \fBExtendableArray\fP< Type >::front () const\fC [inline]\fP"
+
+.PP
+Gets the value at the front of the array\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+<Type> the front index value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 600 of file ExtendableArray\&.h\&.
+.SS "template<class Type > bool \fBExtendableArray\fP< Type >::full () const\fC [inline]\fP"
+
+.PP
+evaluates if the array is full or not 
+.PP
+\fBReturns\fP
+.RS 4
+True / False\&. 
+.RE
+.PP
+
+.PP
+Definition at line 387 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::insertAt (const int givenIndex, const Type & newItem)\fC [inline]\fP"
+
+.PP
+Inserts the value at the given index ( after adjustment ) 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIgivenIndex\fP Zero-based index of the array\&. 
+.br
+\fInewItem\fP The new value to insert\&. 
+.RE
+.PP
+
+.PP
+Definition at line 413 of file ExtendableArray\&.h\&.
+.SS "template<class Type > template<class Type > template< class Type > void \fBExtendableArray\fP< Type >::insertBack (const Type & newItem)\fC [inline]\fP"
+
+.PP
+Inserts the paramater value at the end of the array\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP template datatype\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInewItem\fP The new item\&. 
+.RE
+.PP
+
+.PP
+Definition at line 490 of file ExtendableArray\&.h\&.
+.SS "template<class Type > template<class Type > template< class Type > void \fBExtendableArray\fP< Type >::insertFront (const Type & newItem)\fC [inline]\fP"
+
+.PP
+Inserts the paramater value at the front of the array\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIType\fP template datatype\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInewItem\fP The new item\&. 
+.RE
+.PP
+
+.PP
+Definition at line 455 of file ExtendableArray\&.h\&.
+.SS "template<class Type > Type & \fBExtendableArray\fP< Type >::operator[] (const int index) const\fC [inline]\fP"
+
+.PP
+Array indexer operator ( adjusted inside ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Zero-based index of the\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+<Type> the index value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 651 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::printAll (std::ostream & output) const\fC [inline]\fP"
+
+.PP
+Print all values in the valid array range line by line\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIoutput\fP ostream object ( cout, file, etc\&. ) 
+.RE
+.PP
+
+.PP
+Definition at line 664 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::PrintWithLabel (const std::string & label, std::ostream & output) const\fC [inline]\fP"
+
+.PP
+Allows a string to be passed to output before calling the printAll method\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIlabel\fP The label\&. 
+.br
+\fIoutput\fP ostream object ( cout, file, etc\&. ) 
+.RE
+.PP
+
+.PP
+Definition at line 698 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::shiftLeft (const int givenIndex)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Shift array members left/down, wrapping around to the end\&. 
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIgivenIndex\fP int value passed from outside of the object index is adjusted for use in the method\&. 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file ExtendableArray\&.h\&.
+.SS "template<class Type > void \fBExtendableArray\fP< Type >::shiftRight (const int givenIndex)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+tracks the last index of the circular array Shift array members right/up, wrapping around to the end
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBExcept\fP\fP Exception thrown when class is empty\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIgivenIndex\fP int value passed from outside of the object index is adjusted for use in the method\&. 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file ExtendableArray\&.h\&.
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::size () const\fC [inline]\fP"
+
+.PP
+Gets the size\&. 
+.PP
+\fBReturns\fP
+.RS 4
+An int\&. 
+.RE
+.PP
+
+.PP
+Definition at line 399 of file ExtendableArray\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::capacity\fC [private]\fP"
+
+.PP
+Template datatype pointer for array allocation\&. 
+.PP
+Definition at line 30 of file ExtendableArray\&.h\&.
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::currentSize\fC [private]\fP"
+
+.PP
+The current reserved memory locations of the array\&. 
+.PP
+Definition at line 31 of file ExtendableArray\&.h\&.
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::endIndex\fC [private]\fP"
+
+.PP
+tracks the first index of the circular array 
+.PP
+Definition at line 34 of file ExtendableArray\&.h\&.
+.SS "template<class Type > int \fBExtendableArray\fP< Type >::frontIndex\fC [private]\fP"
+
+.PP
+count of used indeces in the array 
+.PP
+Definition at line 33 of file ExtendableArray\&.h\&.
+.SS "template<class Type > Type* \fBExtendableArray\fP< Type >::typeAr\fC [private]\fP"
+
+.PP
+Definition at line 28 of file ExtendableArray\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CS1D - Extra Credit 1 - Extendable Array from the source code\&.
