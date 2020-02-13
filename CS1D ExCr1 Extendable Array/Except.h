@@ -10,20 +10,16 @@
 
 #include <string>
 #include <exception>
+#include <sstream>
 
-
-
-
-
-enum ERROR_TYPE
-{
-	DEFUALT,
-	FULL,
-	EMPTY,
-	OUT_OF_RANGE
-};
-
-
+/**
+ * @class	Except Except.h Except.h
+ *
+ * @brief	Generic Exception class with basic output setup
+ *
+ * @author	Nick Reardon
+ * @date	12/09/2020
+ */
 class Except : virtual public std::runtime_error {
 
 protected:
@@ -33,10 +29,14 @@ protected:
 
 public:
 
-	/** Constructor (C++ STL string, int, int).
-	 *  @param  msg      The error message
-	 *  @param  err_num  Error number
-	 *  @param  err_off  Error offset
+	/**
+	 * @fn	explicit Except::Except(const std::string& msg, int err_num, int err_off) 
+	 * 		: std::runtime_error(msg)
+	 * @brief	Constructor
+	 *
+	 * @param 	msg	   	The error message.
+	 * @param 	err_num	Error number.
+	 * @param 	err_off	Error offset.
 	 */
 	explicit
 		Except(const std::string& msg, int err_num, int err_off) :
@@ -44,7 +44,7 @@ public:
 	{
 		error_number = err_num;
 		error_offset = err_off;
-
+		
 	}
 
 	/** Destructor.
@@ -64,6 +64,12 @@ public:
 	 */
 	virtual int getErrorOffset() const throw() {
 		return error_offset;
+	}
+
+	virtual void outputError(std::ostream& output) const throw()
+	{
+		output << "Exception - Error number " << error_number
+			<< ":" << std::string(error_offset, ' ') << what() << '\n';
 	}
 
 };

@@ -1,0 +1,178 @@
+****************************************************************************
+* PROGRAMMED BY   : Nick Reardon
+* CLASS           : CS1D
+* SECTION         : MW - 2:30p
+* Extra Credit #1 : Extendable Array
+****************************************************************************
+
+                      Extra Credit #1 - Extendable Array
+
+   Implement the vector ADT by means of an extendable array
+(expands dynamically) used in a circular fashion, so that
+insertions and deletions at the beginning and end run in constant
+time. Print the circular array before and after each insertion and
+deletion. Insertions and deletion that are not at the beginning or
+end will run in O(n) time. Test the vector ADT methods (inserts,
+deletes, size, isEmpty, etc.). The initial array size is 4. Print out
+the index (rank) of the array with the corresponding value.
+
+Do not use the <vector> STL.
+
+    Use the following data:
+
+    Insert 14, 5, 4, 1, 21, 33, 12, 8
+    Delete 14
+    Delete 1
+    Insert 9 at the front of the vector
+    Insert 7 after 33
+    Insert 44 at the end of the vector
+
+Due February 12
+
+****************************************************************************
+
+Initializing int ExtendableArray vector with capacity of 4
+
+
+Calling print method to show the vector is empty
+Exception - Error number 2:     Array is empty - nothing to print
+
+Inserting 14, 5, 4, 1 into vector using insertBack()
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = -842150451
+[ 2 ] = -842150451
+[ 3 ] = -842150451
+Useable order: 14
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5   <- Last index
+[ 2 ] = -842150451
+[ 3 ] = -842150451
+Useable order: 14, 5
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4   <- Last index
+[ 3 ] = -842150451
+Useable order: 14, 5, 4
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4
+[ 3 ] = 1   <- Last index
+Useable order: 14, 5, 4, 1
+
+
+Inserting 21 into vector using insertBack()
+
+Insertion would exceed capacity, so protected expand()
+method is called to double the vector's capacity
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4
+[ 3 ] = 1
+[ 4 ] = 21   <- Last index
+[ 5 ] = -842150451
+[ 6 ] = -842150451
+[ 7 ] = -842150451
+Useable order: 14, 5, 4, 1, 21
+
+Inserting 33, 12, 8 intop vector using insertBack()
+Useable order: 14, 5, 4, 1, 21
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4
+[ 3 ] = 1
+[ 4 ] = 21
+[ 5 ] = 33   <- Last index
+[ 6 ] = -842150451
+[ 7 ] = -842150451
+Useable order: 14, 5, 4, 1, 21, 33
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4
+[ 3 ] = 1
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12   <- Last index
+[ 7 ] = -842150451
+Useable order: 14, 5, 4, 1, 21, 33, 12
+
+Current vector
+[ 0 ] = 14   <- First index
+[ 1 ] = 5
+[ 2 ] = 4
+[ 3 ] = 1
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12
+[ 7 ] = 8   <- Last index
+Useable order: 14, 5, 4, 1, 21, 33, 12, 8
+
+
+removing 14, using eraseFront()
+
+Current vector
+[ 0 ] = 14
+[ 1 ] = 5   <- First index
+[ 2 ] = 4
+[ 3 ] = 1
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12
+[ 7 ] = 8   <- Last index
+Useable order: 5, 4, 1, 21, 33, 12, 8
+
+
+removing 1, using eraseAt()
+
+Current vector
+[ 0 ] = 14
+[ 1 ] = 5
+[ 2 ] = 5   <- First index
+[ 3 ] = 4
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12
+[ 7 ] = 8   <- Last index
+Useable order: 5, 4, 21, 33, 12, 8
+
+
+Inserting 7 after 33 into vector using insertAt()
+
+Current vector
+[ 0 ] = 8   <- Last index
+[ 1 ] = 5
+[ 2 ] = 5   <- First index
+[ 3 ] = 4
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12
+[ 7 ] = 7
+Useable order: 5, 4, 21, 33, 12, 7, 8
+
+
+Inserting 44 into vector using insertBack()
+
+Current vector
+[ 0 ] = 8
+[ 1 ] = 44   <- Last index
+[ 2 ] = 5   <- First index
+[ 3 ] = 4
+[ 4 ] = 21
+[ 5 ] = 33
+[ 6 ] = 12
+[ 7 ] = 7
+Useable order: 5, 4, 21, 33, 12, 7, 8, 44
+Press any key to continue . . .

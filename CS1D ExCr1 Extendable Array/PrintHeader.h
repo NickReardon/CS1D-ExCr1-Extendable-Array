@@ -14,30 +14,73 @@
 #include <string>
 #include <fstream>
 
+ /*****************************************************************************/
+
+
+const std::string PROGRAMMER = "Nick Reardon";
+const std::string SECTION = "MW - 2:30p";
+const std::string CLASS = "CS1D";
+const int PROGRAM_NUM = 1;
+const std::string PROGRAM_NAME = "Extendable Array";
+const std::string PROGRAM_TYPE = "Extra Credit";
+
 /*****************************************************************************
 * PrintHeader
 * ---------------------------------------------------------------------------
 * This function will output a class header through the use of ostream.
 * It also will output the program description
+* Constants must be filled out to specification for each program
 * ----------------------------------------------------------------------------
 *  Call
 * ------
-* The function call requires 1 parameters. The following example uses an
-* output file in the ostream parameter. Ex:
+* The function call requires 2 parameters. The following example uses an
+* output file in the ostream parameter, and a text file name in the string
+* parameter. Ex:
 *
-* 		PrintHeader (oFile);
+* 		PrintHeader (oFile, "input.txt");
 *
 * --------------------------------------------------------------------------- 
 *  Output
 * --------
-* 	The function will output as follows. Ex:
+* 	The function will output as follows. 
+* 	 - Header on top   
+* 	 - Center justified assignment type, program number, title  
+* 	 - Prompt text from given filename    
+* 	 
+* ---------
+* 	 Ex.
 *
-* 		**********************************************************
-*	 	* PROGRAMMED BY : Parsa Khazravi and Nick Reardon
-*	 	* CLASS         : CS1B
-*	 	* SECTION       : MW: 7:30pm
-*	 	* Lab #3        : Functions - GCD
-*	 	*********************************************************
+* ********************************************************************
+* * PROGRAMMED BY   : Nick Reardon
+* * CLASS           : CS1D
+* * SECTION         : MW - 2:30p
+* * Extra Credit #1 : Extendable Array
+* ********************************************************************
+*
+*                       Extra Credit #1 - Extendable Array
+*
+*    Implement the vector ADT by means of an extendable array
+* (expands dynamically) used in a circular fashion, so that
+* insertions and deletions at the beginning and end run in constant
+* time. Print the circular array before and after each insertion and
+* deletion. Insertions and deletion that are not at the beginning or
+* end will run in O(n) time. Test the vector ADT methods (inserts,
+* deletes, size, isEmpty, etc.). The initial array size is 4. Print out
+* the index (rank) of the array with the corresponding value.
+*
+* Do not use the <vector> STL.
+*     Use the following data:
+*
+*     Insert 14, 5, 4, 1, 21, 33, 12, 8
+*     Delete 14
+*     Delete 1
+*     Insert 9 at the front of the vector
+*     Insert 7 after 33
+*     Insert 44 at the end of the vector
+*
+* Due February 12
+*
+****************************************************************************
 *
 * ---------------------------------------------------------------------------
 * CONSTANTS
@@ -50,23 +93,19 @@
 * PROGRAM_NUM		: # of the program
 * PROGRAM_NAME		: Title of the program
 * PROGRAM_TYPE		: Type of program - Lab, Assignment, etc.
-*
-* ---------------------------------------------------------------------------
-* MAX_OUTPUT		: Max movies to be output at once
+* 
 *****************************************************************************/
-const std::string PROGRAMMER = "Nick Reardon";
-const std::string SECTION = "MW - 2:30p";
-const std::string CLASS = "CS1D";
-const int PROGRAM_NUM = 1;
-const std::string PROGRAM_NAME = "Extendable Array";
-const std::string PROGRAM_TYPE = "Extra Credit";
+
+
+
 
 /**
  * @fn	void PrintHeader(std::ostream &output, std::string inputText)
- * @brief	Print header
+ * @brief	This function will output a class header through the use of ostream. It also will
+ * 			output the program description
  *
- * @param [in,out]	output   	ostream output
- * @param 		  	inputText	file name of the prompt text file
+ * @param [in,out]	output   	ostream output.
+ * @param 		  	inputText	file name of the prompt text file.
  */
 void PrintHeader(std::ostream &output, std::string inputText)
 {

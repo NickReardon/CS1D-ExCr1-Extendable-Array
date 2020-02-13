@@ -14,7 +14,7 @@
 #include <string>
 #include "PrintHeader.h"
 
-//Program Specific
+//Program Specific-
 #include "ExtendableArray.h"
 
 #endif // _HEADER_H_

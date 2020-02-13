@@ -12,6 +12,19 @@
 #include <exception>
 #include "Except.h"
 
+/**
+ * @enum	ERROR_TYPE
+ * @brief	Values that represent ExtendableArray error types
+ */
+enum ERROR_TYPE
+{
+	DEFUALT,
+	FULL,
+	EMPTY,
+	OUT_OF_RANGE
+};
+
+
  /**
   * @class	ExtendableArray ExtendableArray.h ExtendableArray.h
   *
@@ -337,38 +350,6 @@ protected:
 	}
 
 
-
-	void shiftRight_Outward(std::ostream& output, int givenIndex) 
-	{ 
-		output << "Called shiftRight_Outward()" << '\n';
-		shiftRight_Outward(givenIndex); 
-	}
-
-	void shiftLeft_Outward(std::ostream& output, const int givenIndex) 
-	{ 
-		output << "Called shiftLeft_Outward()" << '\n';
-		shiftLeft_Outward(givenIndex);
-	}
-
-	void expand(std::ostream& output, const int minIncrease = 1) 
-	{ 
-		output << "Called expand()" << '\n';
-		expand(minIncrease);
-	}
-
-	int adjustedIndex(std::ostream& output, const	int givenIndex) const 
-	{ 
-		output << "Called adjustedIndex()" << '\n';
-		adjustedIndex(givenIndex);
-	}
-
-	void destroy(std::ostream& output)
-	{ 
-		output << "Called destroy()" << '\n';
-		destroy();
-	}
-
-
 #endif // !Protected_Methods //--------------------------------------------------
 
 public:
@@ -393,6 +374,7 @@ public:
 
 		typeAr = new Type[capacity];
 	}
+
 
 	/**
 	 * @fn	ExtendableArray::ExtendableArray<Type>(const ExtendableArray<Type>& otherExArray)
@@ -474,25 +456,6 @@ public:
 		delete[] typeAr;
 	}
 
-
-
-	ExtendableArray<Type>(std::ostream& output, const int newCapacity = 8)
-	{
-		output << "Called constructor" << '\n';
-		ExtendableArray(newCapacity);
-	}
-
-	ExtendableArray<Type>(std::ostream& output, const ExtendableArray<Type>& otherExArray)
-	{
-		output << "Called copy constructor" << '\n';
-		ExtendableArray(otherExArray);
-	}
-
-	ExtendableArray<Type>(std::ostream& output, const Type* ptrArray, const int arSize)
-	{
-		output << "Called array copy contructor" << '\n';
-		ExtendableArray(ptrArray, arSize);
-	}
 
 #endif // !Constructors_/_Deconstructors --------------------------------------------------
 
@@ -840,7 +803,7 @@ public:
 	 *
 	 * @param [in,out]	output	ostream object ( cout, file, etc. )
 	 */
-	void printAll(std::ostream& output) const
+	void printAll(std::ostream& output, const std::string& label) const
 	{
 		if (empty())
 		{
@@ -849,6 +812,9 @@ public:
 		else
 		{
 			int tempIndex = frontIndex;
+
+			output << '\n' << label << '\n';
+
 			for (int i = 0; i < currentSize; i++)
 			{
 				output << typeAr[tempIndex] << '\n';
@@ -866,102 +832,88 @@ public:
 	}
 
 	/**
-	 * @fn	void ExtendableArray::PrintWithLabel(const std::string& label, std::ostream& output) const
-	 * @brief	Allows a string to be passed to output before calling the printAll method
+	 * @fn	void ExtendableArray::oneLinePrintAdjusted(std::ostream& output, const std::string& label) const
+	 * @brief	Print all values in the valid array, adjusted, in one line
 	 *
 	 * @exception	Except	Exception thrown when class is empty.
 	 *
-	 * @param 		  	label 	The label.
 	 * @param [in,out]	output	ostream object ( cout, file, etc. )
+	 * @param 		  	label 	The label.
 	 */
-	void PrintWithLabel(const std::string& label, std::ostream& output) const
+	void oneLinePrintAdjusted(std::ostream& output, const std::string& label) const
 	{
-		output << '\n' << label << '\n';
-
 		if (empty())
 		{
 			throw Except("Array is empty - nothing to print", EMPTY, 5);
 		}
 		else
 		{
-			printAll(output);
-			output << '\n';
+			int tempIndex = frontIndex;
+
+			output << label;
+
+			for (int i = 0; i < currentSize; i++)
+			{
+				if (i != currentSize - 1)
+				{
+					output << typeAr[tempIndex] << ", ";
+				}
+				else
+				{
+					output << typeAr[tempIndex] << '\n';
+				}
+
+				if (tempIndex == capacity - 1)
+				{
+					tempIndex = 0;
+				}
+				else
+				{
+					tempIndex++;
+				}
+			}
+		}
+	}
+
+	/**
+	 * @fn	void ExtendableArray::PrintRealArray(const std::string& label, std::ostream& output) const
+	 * @brief	Print all values in the real array range [ 0 .. capacity ] line by line.
+	 * 			Also indicates the first and last indeces
+	 *
+	 * @exception	Except	Exception thrown when class is empty.
+	 *
+	 * @param 		  	label 	The label.
+	 * @param [in,out]	output	ostream object ( cout, file, etc. )
+	 */
+	void PrintRealArray(const std::string& label, std::ostream& output) const
+	{
+		if (empty())
+		{
+			throw Except("Array is empty - nothing to print", EMPTY, 5);
+		}
+		else
+		{
+			int tempIndex = frontIndex;
+
+			output << '\n' << label << '\n';
+			for (int i = 0; i < capacity; i++)
+			{
+				output << "[ " << i << " ] = " << typeAr[i];
+				if (i == frontIndex)
+				{
+					output << "   <- First index";
+				}
+				else if (i == endIndex)
+				{
+					output << "   <- Last index";
+				}
+				output << '\n';
+			}
 		}
 	}
 
 
-	
-	void clearAll(std::ostream& output, const int newCapacity = capacity)
-	{
-		output << "Called clearAll()" << '\n';
-		clearAll(capacity);
-	}
-	
-	bool empty(std::ostream& output) const
-	{
-		output << "Called empty()" << '\n';
-		empty();
-	}
-	
-	bool full(std::ostream& output) const
-	{
-		output << "Called full()" << '\n';
-		full();
-	}
-	
-	int size(std::ostream& output) const
-	{
-		output << "Called size()" << '\n';
-		size();
-	}
-	
-	void insertAt(std::ostream& output, const int givenIndex, const Type& newItem)
-	{
-		output << "Called insertAt()" << '\n';
-		insertAt(givenIndex, newItem);
-	}
-	
-	void insertFront(std::ostream& output, const Type& newItem)
-	{
-		output << "Called insertFront()" << '\n';
-		insertFront(newItem);
-	}
-	
-	void insertBack(std::ostream& output, const Type& newItem)
-	{
-		output << "Called insertBack()" << '\n';
-		insertBack(newItem);
-	}
-	
-	void eraseFront(std::ostream& output)
-	{
-		output << "Called eraseFront()" << '\n';
-		eraseFront();
-	}
-	
-	void eraseBack(std::ostream& output)
-	{
-		output << "Called eraseBack()" << '\n';
-		eraseBack();
-	}
-	
-	Type front(std::ostream& output) const
-	{
-		output << "Called front()" << '\n';
-		front();
-	}
-	
-	Type back(std::ostream& output) const
-	{
-		output << "Called back()" << '\n';
-		back();
-	}
-	
-	Type& at(std::ostream& output, const int index) const
-	{
-		output << "Called at()" << '\n';
-		at(index);
-	}
+
 	
 #endif // !Public_Methods //--------------------------------------------------
 
